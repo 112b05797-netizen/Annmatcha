@@ -1,0 +1,284 @@
+/* =========================== */
+/*        BASE SETTING         */
+/* =========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+}
+
+/* Smooth Fade-in for Product Cards */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.8s ease;
+}
+
+[data-animate].show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================== */
+/*          NAVBAR             */
+/* =========================== */
+
+.custom-bgcolor {
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+.nav-link {
+    color: white !important;
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    margin: 0 14px;
+    transition: 0.25s;
+}
+
+.nav-link:hover {
+    color: #294E52 !important;
+}
+
+.dropdown-item:hover {
+    background: #294E52;
+    color: #fff !important;
+}
+
+.nav-icons i {
+    color: white;
+    font-size: 1.25rem;
+    transition: 0.3s ease;
+}
+
+.nav-icons i:hover {
+    color: #294E52;
+}
+
+/* =========================== */
+/*      HERO FULL CAROUSEL     */
+/* =========================== */
+
+.merch-carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation: fadeIn 1.4s ease both;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(1.02); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* =========================== */
+/*        MERCH SECTION        */
+/* =========================== */
+
+.merch-section {
+    padding: 90px 0 60px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: #294E52;
+    margin-bottom: 40px;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.merch-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.merch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+}
+
+.merch-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.merch-card h4 {
+    margin-top: 12px;
+    color: #294E52;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* =========================== */
+/*            MODAL            */
+/* =========================== */
+
+.modal-overlay {
+    display: none; /* <--- 修正初始不出現灰頁問題 */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    animation: pop 0.35s ease;
+    object-fit: contain; /* <--- 防止圖片被壓縮 */
+}
+
+@keyframes pop {
+    0% { opacity: 0; transform: scale(.85); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.close-modal {
+    position: absolute;
+    top: 28px;
+    right: 34px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #d6d6d6;
+}
+
+/* =========================== */
+/*      BACK TO TOP BUTTON     */
+/* =========================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border: 2px solid #294E52;
+    border-radius: 50%;
+    color: #294E52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #294E52;
+    color: white;
+}
+
+/* =========================== */
+/*            FOOTER           */
+/* =========================== */
+
+.am-footer {
+    background: #3f4d47;
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+}
+
+.footer-logo {
+    width: 220px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-col a {
+    display: block;
+    color: #e8e8e8;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.footer-col p {
+    color: #e8e8e8;
+}
+
+.jp {
+    color: white !important;
+}
+
+/* =========================== */
+/*              RWD            */
+/* =========================== */
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 60vh;
+    }
+
+    .merch-card img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-img {
+        height: 48vh;
+    }
+}

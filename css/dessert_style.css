@@ -1,0 +1,258 @@
+/* =========================== */
+/*         BASE STYLE          */
+/* =========================== */
+
+body {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================== */
+/*          NAVBAR (從 index 完整複製) */
+/* =========================== */
+
+.custom-bgcolor {
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white !important;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: white !important;
+    margin: 0 14px;
+    font-size: 1.15rem;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #294E52 !important;
+}
+
+.dropdown-item {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.3px;
+}
+
+.dropdown-item:hover {
+    background-color: #294E52 !important;
+    color: white !important;
+}
+
+.nav-icons i {
+    color: white;
+    font-size: 1.25rem;
+    transition: 0.3s ease;
+}
+
+.nav-icons i:hover {
+    color: #294E52;
+}
+
+/* =========================== */
+/*        HERO SLIDER FIX      */
+/* =========================== */
+
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* =========================== */
+/*        PRODUCT SECTION      */
+/* =========================== */
+
+.product-section {
+    padding: 120px 60px;
+}
+
+.product-title {
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.product-card {
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.product-name {
+    margin-top: 14px;
+    font-size: 1.2rem;
+}
+
+.product-price {
+    color: #777;
+    margin-top: 5px;
+}
+
+/* =========================== */
+/*            FOOTER (同步 index) */
+/* =========================== */
+
+.am-footer {
+    background: #3f4d47;
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-col p {
+    color: white !important;
+}
+
+.footer-col a {
+    display: block;
+    color: #e8e8e8;
+    margin-bottom: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.footer-logo {
+    width: 80px;
+}
+
+.footer-brand h3 {
+    font-family: "Playfair Display", serif;
+    margin-top: 12px;
+    color: white;
+}
+
+.jp {
+    color: white !important;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-bottom a {
+    margin: 0 10px;
+    color: #e8e8e8;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+/* =========================== */
+/*            RWD              */
+/* =========================== */
+
+@media (max-width: 768px) {
+    .product-section { padding: 80px 20px; }
+    .product-grid { padding: 0 10px; gap: 20px; }
+
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-text p { font-size: 1rem; }
+}
+/* =========================== */
+/*      Back To Top Button     */
+/* =========================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #294E52;
+    color: #294E52;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s ease;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #294E52;
+    color: white;
+}
+/* Navbar Logo */
+.nav-logo {
+    height: 40px;
+    width: auto;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
+    margin-right: 12px;
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 230px;
+    height: auto;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.45));
+    margin-bottom: 10px;
+}

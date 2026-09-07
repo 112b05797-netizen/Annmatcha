@@ -1,0 +1,328 @@
+/* ================================ */
+/*       BASE / GLOBAL STYLE        */
+/* ================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+}
+p1 {
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+p {
+    font-size: 1rem;
+    color: #3F3E3E;
+}
+
+/* Animation base */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.9s ease;
+}
+
+[data-animate].show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================ */
+/*           NAVBAR STYLE           */
+/* ================================ */
+
+.custom-bgcolor {
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+    width: 170px;
+}
+
+.nav-link {
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.4px;
+    color: white !important;
+    margin: 0 14px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #294E52 !important;
+}
+
+.dropdown-item {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #294E52 !important;
+    color: white !important;
+}
+
+.nav-icons i {
+    color: white;
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+}
+
+.nav-icons i:hover {
+    color: #294E52;
+}
+
+
+/* ================================ */
+/*             HERO AREA            */
+/* ================================ */
+
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.about-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(92%);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.18);
+    backdrop-filter: blur(2px);
+}
+
+.about-hero-text {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-hero-text h1 {
+    font-size: 3rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.about-hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+
+/* ================================ */
+/*            STORY BLOCKS          */
+/* ================================ */
+
+.story-section {
+    padding: 90px 0;
+}
+
+.story-text {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-top: 14px;
+}
+
+.story-img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    transition: 0.35s ease;
+}
+
+.story-img:hover {
+    transform: scale(1.03);
+}
+
+.section-title {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    color: #294E52;
+}
+
+
+/* ================================ */
+/*           TIMELINE STYLE         */
+/* ================================ */
+
+.timeline-section {
+    background: #f7f7f7;
+    padding: 80px 0;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #294E52;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid #294E52;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.timeline-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: #294E52;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: #294E52;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 4px;
+}
+
+
+/* ================================ */
+/*         BACK TO TOP BUTTON       */
+/* ================================ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #294E52;
+    color: #294E52;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #294E52;
+    color: white;
+}
+
+
+/* ================================ */
+/*             FOOTER               */
+/* ================================ */
+
+.am-footer {
+    background: #3f4d47;
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 60px;
+}
+
+.footer-logo {
+    width: 249px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    display: block;
+    color: #e8e8e8;
+    margin-bottom: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+.jp {
+    color: #ffffff !important;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 25px;
+    color: #eaeaea;
+}
+
+
+/* ================================ */
+/*               RWD               */
+/* ================================ */
+
+@media (max-width: 992px) {
+    .about-hero-text h1 { font-size: 2.4rem; }
+}
+
+@media (max-width: 768px) {
+
+    .story-section { padding: 60px 20px; }
+
+    .section-title { font-size: 1.9rem; }
+
+    .timeline { padding-left: 15px; }
+    .timeline-item { padding-left: 25px; }
+
+}
+
+@media (max-width: 576px) {
+
+    .about-hero { height: 70vh; }
+
+    .about-hero-text h1 { font-size: 2rem; }
+    .about-hero-text p { font-size: 0.9rem; }
+
+}
