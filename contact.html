@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ann Matcha – Contact</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/contact_style.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/b02a5aa998.js" crossorigin="anonymous"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body>
+
+<!-- ======================== -->
+<!--        NAVBAR            -->
+<!-- ======================== -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-bgcolor px-4">
+
+    <!-- LOGO：回首頁 -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/38.png" alt="Ann Matcha Logo" class="nav-logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+
+            <!-- Menu -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-main="menu" data-toggle="dropdown">Menu</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="dessert.html">Dessert</a>
+                    <a class="dropdown-item" href="drinks.html">Drinks</a>
+                </div>
+            </li>
+
+            <!-- Meow -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-main="meow" data-toggle="dropdown">Meow</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="meow.html">Store Cat</a>
+                    <a class="dropdown-item" href="#">Pet-Friendly Guide</a>
+                </div>
+            </li>
+
+            <!-- Merch -->
+            <li class="nav-item">
+                <a class="nav-link" href="merch.html">Merch</a>
+            </li>
+
+            <!-- About -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-main="about" data-toggle="dropdown">About</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="ourstory.html">Our Story</a>
+                    <a class="dropdown-item" href="contact.html">Contact</a>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- NAV ICONS -->
+        <div class="nav-icons d-flex align-items-center">
+            <a href="#" class="nav-icon mx-2"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="nav-icon mx-2"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="#" class="nav-icon mx-2"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- ======================== -->
+<!--       CONTACT HERO       -->
+<!-- ======================== -->
+<section class="contact-hero">
+    <div class="contact-hero-text">
+        <h1>Contact Us</h1>
+        <p>We’re here to help — feel free to reach out anytime.</p>
+    </div>
+</section>
+
+
+
+<!-- ======================== -->
+<!--     CONTACT SECTION      -->
+<!-- ======================== -->
+<section class="contact-section container">
+
+    <div class="row">
+
+        <!-- Info -->
+        <div class="col-md-6 contact-info" data-animate>
+            <h2>Get in Touch</h2>
+
+            <p><i class="fa-solid fa-location-dot"></i> 台南市安南區安純抹茶路 123 號</p>
+            <p><i class="fa-solid fa-phone"></i> 0900-000-000</p>
+            <p><i class="fa-solid fa-envelope"></i> annmatcha@gmail.com</p>
+
+            <h4 class="hours-title">營業時間</h4>
+            <p>Mon – Fri：11:00 – 19:00</p>
+            <p>Sat – Sun：10:00 – 20:00</p>
+        </div>
+
+        <!-- Form -->
+        <div class="col-md-6 contact-form" data-animate>
+            <h2>Send a Message</h2>
+
+            <form action="mailto:annmatcha@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================== -->
+<!--        GOOGLE MAP        -->
+<!-- ======================== -->
+<section class="map-section" data-animate>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1842726554173!2d120.27080997534014!3d22.906573120647025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e736b14c964cd%3A0x9b1a2dbb4192bc23!2z6ZW35qau5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1766030083275!5m2!1szh-TW!2stw"
+            width="600" height="450" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+
+
+<!-- Back To Top Button -->
+<a href="#" class="back-to-top" id="backToTopBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+
+
+<!-- ======================== -->
+<!--          FOOTER          -->
+<!-- ======================== -->
+<footer class="am-footer" id="footer">
+    <div class="container footer-container">
+
+        <!-- Brand -->
+        <div class="footer-col footer-brand">
+            <a href="index.html">
+                <img src="images/38.png" class="footer-logo" alt="Ann Matcha Logo">
+            </a>
+            <h3>Ann Matcha</h3>
+            <p class="jp">まっちゃ</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="dessert.html">Menu</a>
+            <a href="meow.html">Meow</a>
+            <a href="merch.html">Merch</a>
+            <a href="ourstory.html">About</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.youtube.com/">YouTube</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Reservations</h4>
+            <p>Email: annmatcha@gmail.com</p>
+            <p>Tel: 0900-000-000</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom container">
+        <p class="copyright">© 2025 AnnMatcha まっちゃ. All rights reserved.</p>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+</footer>
+
+
+
+<!-- ======================== -->
+<!--            JS            -->
+<!-- ======================== -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+<script>
+// Back to Top button
+document.addEventListener("scroll", () => {
+    const btn = document.getElementById("backToTopBtn");
+    if (window.scrollY > 400) btn.classList.add("show");
+    else btn.classList.remove("show");
+});
+
+// Fade-in animation
+const items = document.querySelectorAll("[data-animate]");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("show");
+    });
+});
+items.forEach(i => observer.observe(i));
+</script>
+
+</body>
+</html>

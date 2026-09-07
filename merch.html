@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ann Matcha – Merch</title>
+
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/merch_style.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b02a5aa998.js" crossorigin="anonymous"></script>
+
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-bgcolor px-4">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/38.png" class="nav-logo">
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Menu</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="dessert.html">Dessert</a>
+                    <a class="dropdown-item" href="index.html#drinks">Drinks</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="meow.html">Meow</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="merch.html">Merch</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="ourstory.html">Our Story</a>
+                    <a class="dropdown-item" href="index.html#footer">Contact</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="nav-icons d-flex">
+            <i class="fa-solid fa-magnifying-glass mx-2"></i>
+            <i class="fa-solid fa-bag-shopping mx-2"></i>
+            <i class="fa-solid fa-user mx-2"></i>
+        </div>
+    </div>
+</nav>
+
+
+<!-- FULL HERO SLIDER -->
+<div id="merchCarousel" class="carousel slide merch-carousel" data-ride="carousel">
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/01.jpg" class="carousel-img">
+        </div>
+        <div class="carousel-item">
+            <img src="images/04.jpg" class="carousel-img">
+        </div>
+        <div class="carousel-item">
+            <img src="images/06.jpg" class="carousel-img">
+        </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#merchCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#merchCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+</div>
+
+
+<!-- MERCH SECTION -->
+<section class="merch-section">
+    <h2 class="section-title">Merch Collection</h2>
+
+    <div class="merch-grid">
+
+        <!-- Card Set 1 -->
+        <div class="merch-card" onclick="openGroup(1)">
+            <img src="images/04.jpg">
+            <h4>Matcha Card Set </h4>
+        </div>
+
+        <!-- Card Set 2 -->
+  
+        <div class="merch-card" onclick="openGroup(4)">
+            <img src="images/07.jpg">
+            <h4>Cat Matcha Cards </h4>
+        </div>
+
+        <!-- Notebook -->
+        <div class="merch-card" onclick="openSingle('images/37.jpg')">
+            <img src="images/37.jpg">
+            <h4>Matcha Notebook</h4>
+        </div>
+
+        <!-- Tote Bag -->
+        <div class="merch-card" onclick="openSingle('images/38.jpg')">
+            <img src="images/38.jpg">
+            <h4>Matcha Tote Bag</h4>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+
+    <img id="modalImg" class="modal-content">
+</div>
+
+
+<!-- BACK TO TOP -->
+<a href="#" id="backTop" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+<!-- FOOTER -->
+<footer class="am-footer" id="footer">
+    <div class="container footer-container">
+
+        <div class="footer-col">
+            <img src="images/38.png" class="footer-logo">
+            <h3>Ann Matcha</h3>
+            <p class="jp">まっちゃ</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="dessert.html">Menu</a>
+            <a href="meow.html">Meow</a>
+            <a href="merch.html">Merch</a>
+            <a href="ourstory.html">About</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Social</h4>
+            <a>Instagram</a>
+            <a>Facebook</a>
+            <a>YouTube</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p>Email: info@annmatcha.com</p>
+            <p>Tel: 0900-000-000</p>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+<script>
+// ---------- Image Groups ----------
+const groups = {
+    1: ["images/03.jpg", "images/04.jpg"],
+    2: ["images/04.jpg", "images/06.jpg"],
+    3: ["images/06.jpg", "images/07.jpg"],
+    4: ["images/07.jpg", "images/06.jpg"]
+};
+
+let currentGroup = [];
+let index = 0;
+
+function openGroup(groupID) {
+    currentGroup = groups[groupID];
+    index = 0;
+    showModal();
+}
+
+function openSingle(img) {
+    currentGroup = [img];
+    index = 0;
+    showModal();
+}
+
+function showModal() {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+
+    modal.style.display = "flex";
+    modalImg.src = currentGroup[index];
+
+    modal.onclick = e => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    };
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+// ---------- Back to Top ----------
+document.addEventListener("scroll", () => {
+    const btn = document.getElementById("backTop");
+    btn.classList.toggle("show", window.scrollY > 300);
+});
+</script>
+
+</body>
+</html>

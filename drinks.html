@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ann Matcha – Drinks</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/drinks_style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/b02a5aa998.js" crossorigin="anonymous"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body id="top">
+
+<!-- ======================== -->
+<!--         NAVBAR           -->
+<!-- ======================== -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-bgcolor px-4">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <img src="images/38.png" class="nav-logo" alt="Ann Matcha Logo">
+</a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Menu</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="dessert.html">Dessert</a>
+                    <a class="dropdown-item" href="drinks.html">Drinks</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Meow</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="meow.html">Store Cat</a>
+                    <a class="dropdown-item" href="#">Pet-Friendly Guide</a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="ourstory.html">Our Story</a>
+                    <a class="dropdown-item" href="contact.html">Contact</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="nav-icons d-flex align-items-center">
+            <a href="#" class="nav-icon mx-2"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="nav-icon mx-2"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="#" class="nav-icon mx-2"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ======================== -->
+<!--   HERO FULL (same as index) -->
+<!-- ======================== -->
+<section id="home" class="hero-section">
+    <img src="images/08.jpg" class="hero-bg" alt="Matcha Origin Hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-text">
+        <h1>Matcha Origins &amp; Drinks</h1>
+        <p>Pure Matcha • Calm Moments • Cozy Lifestyle</p>
+
+        <a href="#origins" class="hero-btn">Explore More</a>
+    </div>
+</section>
+
+
+<!-- ======================== -->
+<!--    ORIGIN PORTFOLIO      -->
+<!-- ======================== -->
+<section id="origins" class="origin-section container py-5">
+    <h2 class="section-title text-center mb-5">Matcha Origins</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="origin-card" data-toggle="modal" data-target="#originUji">
+                <img src="images/30.jpg" class="origin-img">
+                <div class="origin-overlay"><h4>京都・宇治</h4></div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="origin-card" data-toggle="modal" data-target="#originNishio">
+                <img src="images/32.jpg" class="origin-img">
+                <div class="origin-overlay"><h4>愛知・西尾</h4></div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="origin-card" data-toggle="modal" data-target="#originYame">
+                <img src="images/31.jpg" class="origin-img">
+                <div class="origin-overlay"><h4>福岡・八女</h4></div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="origin-card" data-toggle="modal" data-target="#originShizuoka">
+                <img src="images/33.jpeg" class="origin-img">
+                <div class="origin-overlay"><h4>靜岡抹茶</h4></div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="origin-card" data-toggle="modal" data-target="#originKagoshima">
+                <img src="images/34.jpg" class="origin-img">
+                <div class="origin-overlay"><h4>鹿兒島抹茶</h4></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================== -->
+<!--   MODALS WITH IMAGES     -->
+<!-- ======================== -->
+
+<style>
+.modal-hero-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+</style>
+
+<div class="modal fade" id="originUji">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-4">
+            <img src="images/30.jpg" class="modal-hero-img">
+            <h3>京都・宇治</h3>
+            <p>
+                日本抹茶的代名詞，擁有超過800年歷史。京都宇治以甘甜、鮮味、濃郁的香氣聞名，
+                茶湯呈現鮮翠綠，口感細膩滑順，帶有優雅旨味。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="originNishio">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-4">
+            <img src="images/32.jpg" class="modal-hero-img">
+            <h3>愛知・西尾</h3>
+            <p>
+                西尾抹茶以溫和甘味、鮮豔翠綠著稱，是甜點與飲品常用的高品質抹茶來源。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="originYame">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-4">
+            <img src="images/31.jpg" class="modal-hero-img">
+            <h3>福岡・八女</h3>
+            <p>
+                八女抹茶香氣柔和、口感圓潤，被視為日本高級茶代表之一。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="originShizuoka">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-4">
+            <img src="images/33.jpeg" class="modal-hero-img">
+            <h3>靜岡抹茶</h3>
+            <p>
+                靜岡為日本最大茶產區，風味清新帶青草香，是日常飲用的熱門選擇。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="originKagoshima">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-4">
+            <img src="images/34.jpg" class="modal-hero-img">
+            <h3>鹿兒島抹茶</h3>
+            <p>
+                鹿兒島抹茶色澤深綠、層次濃郁，因火山土壤孕育出獨特風味。
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- ======================== -->
+<!--       DRINKS SECTION     -->
+<!-- ======================== -->
+<section class="product-section">
+    <h2 class="product-title">飲品 Drinks</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="images/141897427.jpg" alt="">
+            <h4 class="product-name">抹茶鮮奶</h4>
+        </div>
+
+        <div class="product-card">
+            <img src="images/141897425.jpg" alt="">
+            <h4 class="product-name">焙茶鮮奶</h4>
+        </div>
+
+        <div class="product-card">
+            <img src="images/36.jpg" alt="">
+            <h4 class="product-name">抹茶生椰</h4>
+        </div>
+
+        <div class="product-card">
+            <img src="images/35.png" alt="">
+            <h4 class="product-name">焙茶生椰</h4>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ======================== -->
+<!--       BACK TO TOP        -->
+<!-- ======================== -->
+<a href="#top" class="back-to-top" id="backToTopBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<script>
+const backToTopBtn = document.getElementById("backToTopBtn");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) backToTopBtn.classList.add("show");
+    else backToTopBtn.classList.remove("show");
+});
+</script>
+
+
+<!-- ======================== -->
+<!--          FOOTER          -->
+<!-- ======================== -->
+<footer class="am-footer" id="footer">
+    <div class="container footer-container">
+
+        <div class="footer-col footer-brand">
+            <a href="index.html">
+    <img src="images/38.png" class="footer-logo" alt="Ann Matcha Logo">
+</a>
+
+            <h3>Ann Matcha</h3>
+            <p class="jp">まっちゃ</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="dessert.html">Menu</a>
+            <a href="meow.html">Meow</a>
+            <a href="merch.html">Merch</a>
+            <a href="ourstory.html">About</a>
+        </div>
+
+       <div class="footer-col">
+            <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.facebook.com/?locale=zh_TW" target="_blank" rel="noopener">Facebook</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Reservations</h4>
+            <p>Email: annmatcha@gmail.com</p>
+            <p>Tel: 0900-000-000</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom container">
+        <p class="copyright">© 2025 AnnMatcha まっちゃ. All rights reserved.</p>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+</body>
+</html>
